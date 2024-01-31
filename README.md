@@ -1,9 +1,8 @@
 # TECHIN 510 Lab 4 
 
+## Before we run the app:
 - pip install pytz
 - pip install streamlit-autorefresh
-
-Run the app:
 - streamlit run app.py
 
 ## Regular expression, datetime, and real-time data
