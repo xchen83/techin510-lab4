@@ -1,0 +1,26 @@
+name: Hello World Workflow
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  run_hello_world:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip  # Upgrade pip
+          # If there are any dependencies, install them here
+          # pip install -r requirements.txt
+
+      - name: Run hello.py
+        run: |
+          python hello.py
